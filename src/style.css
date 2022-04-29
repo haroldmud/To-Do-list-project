@@ -5,6 +5,7 @@ body {
 }
 
 .container {
+  position: relative;
   box-shadow: 1px 1px  15px grey;
   width: 30%;
   justify-content: center;
@@ -43,11 +44,24 @@ body {
   height: 100px;
 }
 
+.icn3 {
+  position: absolute;
+  width: 17px;
+  height: 18px;
+  right: 10px;
+  border: red solid 1px;
+}
+
 .description {
   display: flex;
+  align-items: center;
   border-bottom: rgba(128, 128, 128, 0.568) solid 1px;
   margin-left: -11%;
   height: 60px;
+}
+
+.description:hover {
+  background-color: rgba(128, 128, 128, 0.247);
 }
 
 #list {
@@ -56,31 +70,33 @@ body {
 
 .check {
   display: flex;
+  width: 100%;
 }
 
 .checked {
-  margin-top: 5%;
   margin-left: 3%;
   margin-right: 5%;
   outline: none;
 }
 
-b {
-  height: 10%;
-  font-size: 20px;
-  font-weight: 1000;
+.trashImg {
+  display: none;
 }
 
 .dots {
   display: flex;
   flex-direction: column;
-  padding-top: 6.5px;
-  right: 15px;
-  height: 80%;
+  width: 30px;
+  padding-top: 15px;
+}
+
+.dots img {
+  align-items: center;
+  width: 20px;
 }
 
 .checking {
-  width: 21rem;
+  width: 95%;
 }
 
 .delete_btn {
