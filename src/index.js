@@ -64,7 +64,7 @@ const LsParse = localStorage.getItem('plans');
 const parseLS = JSON.parse(LsParse);
 
 parseLS.forEach((a, i) => {
-  list.innerHTML += `<li class="description" draggabble="true">
+  list.innerHTML += `<li id="li${i}" class="description" draggabble="true">
   <input type="checkbox" name="" class="checked">
   <div class="check">
     <p class="checking" id="theTask${i}"> ${a.description} </p>
@@ -79,7 +79,7 @@ parseLS.forEach((a, i) => {
 
 const ellipsis = document.querySelectorAll('.dots');
 for (let d = 0; d < ellipsis.length; d++) {
-  const image = document.getElementById(`dit${d}`);
+  const image = document.getElementById(`li${d}`);
   image.addEventListener('mouseover', () => {
     document.getElementById(`dit${d}`).style.display = 'none';
     document.getElementById(`trasher${d}`).style.display = 'flex';
