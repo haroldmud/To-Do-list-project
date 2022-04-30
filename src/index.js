@@ -98,16 +98,6 @@ for (let i = 0; i < trash.length; i++) {
   });
 }
 
-// const elems = JSON.parse(localStorage.getItem('plans'));
-// const checkboxes=document.querySelectorAll('.icn3');
-// for (let k=0; k < checkboxes.length; k++){
-//   checkboxes[k].addEventListener('click',()=>{
-//    elems=elems.filter((obj)=>elems.indexOf(obj)!==k);
-//     localStorage.setItem('plans',JSON.stringify(elems))
-
-//   })
-// }
-
 function updateId() {
   const task = JSON.parse(localStorage.getItem('plans'));
   task.forEach((a, i) => {
@@ -118,7 +108,6 @@ function updateId() {
 
 function Removall() {
   const elems = JSON.parse(localStorage.getItem('plans'));
-  // const removeOne=document.querySelectorAll('.icn3');
   for (let k = 0; k < elems.length; k++) {
     document.getElementById(`trasher${k}`).addEventListener('click', () => {
       const elemente = elems.filter((obj, i) => obj.index !== k);
